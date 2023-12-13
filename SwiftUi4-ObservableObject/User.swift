@@ -9,4 +9,5 @@ import Foundation
 class UserData: ObservableObject {
     @Published var name: String = ""
     @Published var lastName: String = ""
+    @Published var quote: String = ""
 }

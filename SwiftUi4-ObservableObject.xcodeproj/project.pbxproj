@@ -12,6 +12,8 @@
 		432CFD832B29C6C6003FD7F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 432CFD822B29C6C6003FD7F1 /* Assets.xcassets */; };
 		432CFD862B29C6C6003FD7F1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 432CFD852B29C6C6003FD7F1 /* Preview Assets.xcassets */; };
 		432CFD8D2B29C716003FD7F1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432CFD8C2B29C716003FD7F1 /* User.swift */; };
+		43BA88A02B2A281F00345531 /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BA889F2B2A281F00345531 /* SecondView.swift */; };
+		43BA88A22B2A282900345531 /* ThirdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BA88A12B2A282900345531 /* ThirdView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		432CFD822B29C6C6003FD7F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		432CFD852B29C6C6003FD7F1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		432CFD8C2B29C716003FD7F1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		43BA889F2B2A281F00345531 /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
+		43BA88A12B2A282900345531 /* ThirdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 				432CFD822B29C6C6003FD7F1 /* Assets.xcassets */,
 				432CFD842B29C6C6003FD7F1 /* Preview Content */,
 				432CFD8C2B29C716003FD7F1 /* User.swift */,
+				43BA889F2B2A281F00345531 /* SecondView.swift */,
+				43BA88A12B2A282900345531 /* ThirdView.swift */,
 			);
 			path = "SwiftUi4-ObservableObject";
 			sourceTree = "<group>";
@@ -141,7 +147,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				432CFD812B29C6C3003FD7F1 /* ContentView.swift in Sources */,
+				43BA88A22B2A282900345531 /* ThirdView.swift in Sources */,
 				432CFD7F2B29C6C3003FD7F1 /* SwiftUi4_ObservableObjectApp.swift in Sources */,
+				43BA88A02B2A281F00345531 /* SecondView.swift in Sources */,
 				432CFD8D2B29C716003FD7F1 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

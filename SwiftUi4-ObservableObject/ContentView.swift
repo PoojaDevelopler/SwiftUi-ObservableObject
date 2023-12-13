@@ -20,52 +20,54 @@ struct ContentView: View {
         userData.name.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
     }
     
-   
-    
     var body: some View {
-        VStack {
-            Text("Hello...😃")
-                .multilineTextAlignment(.center)
-                .font(.title)
-                .bold()
-                .foregroundColor(.mint)
-                .padding()
+        NavigationStack{
             
-            Text("\(userData.name) \(userData.lastName)")
-                .multilineTextAlignment(.center)
-                .font(.title2)
-                .bold()
-                .foregroundColor(.mint)
-                .padding()
-            
-            Text("\(displayedGreeting) " )
-                .multilineTextAlignment(.center)
-                .lineLimit(10)
-                .font(.title3)
-                .foregroundColor(.mint)
-                .padding()
-                .fixedSize(horizontal: false, vertical: true)
-            Spacer()
-          
-            
-            TextField("Enter your  name", text: $userData.name)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding()
-          
-            
-            Button(action: {
+            VStack {
+                Text("Hello...😃")
+                    .multilineTextAlignment(.center)
+                    .font(.title)
+                    .bold()
+                    .foregroundColor(.mint)
+                    .padding()
+                
+                Text("\(userData.name) \(userData.lastName)")
+                    .multilineTextAlignment(.center)
+                    .font(.title2)
+                    .bold()
+                    .foregroundColor(.mint)
+                    .padding()
+                
+                Text("\(displayedGreeting) " )
+                    .multilineTextAlignment(.center)
+                    .lineLimit(10)
+                    .font(.title3)
+                    .foregroundColor(.mint)
+                    .padding()
+                    .fixedSize(horizontal: false, vertical: true)
+                Spacer()
+                
+                
+                TextField("Enter your  name", text: $userData.name)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding()
+                
+                NavigationLink("Go to 2nd View", destination: SecondView())
+                
+                Button(action: {
                     displayedGreeting = greetings.randomElement() ?? ""
-
-            }, label: {
-                Text("Get ur quote of the day 😇")
-                    .lineLimit(1)
-            })
-            .padding()
-            .disabled(isFirstNameEmpty )
-            .buttonStyle(MyButtonStyle(isDisabled: isFirstNameEmpty))
-
-        }
-        .padding()
+                    userData.quote = displayedGreeting
+                    
+                }, label: {
+                    Text("Get ur quote of the day 😇")
+                        .lineLimit(1)
+                })
+                .padding()
+                .disabled(isFirstNameEmpty )
+                .buttonStyle(MyButtonStyle(isDisabled: isFirstNameEmpty))
+            }.navigationTitle("")
+            
+        }.environmentObject(userData)
     }
 }
 
