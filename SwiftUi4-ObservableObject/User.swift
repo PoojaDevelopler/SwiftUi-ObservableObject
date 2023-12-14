@@ -11,3 +11,7 @@ class UserData: ObservableObject {
     @Published var lastName: String = ""
     @Published var quote: String = ""
 }
+
+class Account:ObservableObject{
+    @Published var accountBalance:Int = 0
+}

@@ -10,7 +10,8 @@ import SwiftUI
 struct ContentView: View {
     @ObservedObject private var userData : UserData = UserData()
     @State private var displayedGreeting: String = ""
-    
+    @ObservedObject private var account:Account = Account()
+
     let greetings = ["😃 How are you?",
                      "This code creates a simple SwiftUI view " ,
                      "Growing every day, one step at a time." ,
@@ -67,7 +68,10 @@ struct ContentView: View {
                 .buttonStyle(MyButtonStyle(isDisabled: isFirstNameEmpty))
             }.navigationTitle("")
             
-        }.environmentObject(userData)
+        }
+        .environmentObject(userData)
+        .environmentObject(account)
+
     }
 }
 

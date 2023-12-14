@@ -10,12 +10,15 @@ import SwiftUI
 struct ThirdView: View {
     
     @EnvironmentObject private var userData : UserData
+    @EnvironmentObject private var account : Account
+
     
     var body: some View {
-        Text("Hi \(userData.name)")
-        Text("This is your quote:")
-        Text(userData.quote)
-            .italic()
+        Text("Hi \(userData.name)").bold()
+            .foregroundColor(.red)
+        Text("your account balance:-\(account.accountBalance)").bold()
+            .foregroundColor(.green)
+
     }
 }
 
@@ -23,5 +26,6 @@ struct ThirdView_Previews: PreviewProvider {
     static var previews: some View {
         ThirdView()
             .environmentObject(UserData())
+            .environmentObject(Account())
     }
 }

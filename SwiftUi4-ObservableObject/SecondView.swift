@@ -8,15 +8,26 @@
 import SwiftUI
 
 struct SecondView: View {
+    
+    @EnvironmentObject var account:Account
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-        NavigationLink("Navigate to third", destination: ThirdView())
-
+        VStack{
+            
+            Stepper("Balance \(account.accountBalance)", value: $account.accountBalance)
+//            TextField("Enter your  name", value: $account.accountBalance, formatter: NumberFormatter())
+//                .textFieldStyle(RoundedBorderTextFieldStyle())
+                
+            NavigationLink("Navigate", destination: ThirdView())
+            
+            
+        }.padding()
     }
 }
 
 struct SecondView_Previews: PreviewProvider {
     static var previews: some View {
         SecondView()
+            .environmentObject(Account())
+
     }
 }
